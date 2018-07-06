@@ -1,0 +1,11 @@
+//ejecutar tareas despues de otras
+
+task a << {
+	println 'tarea a'
+}
+
+task b << {
+	println 'tarea b'
+}
+
+a.finalizedBy b //cuando termine de ejecutarse a se ejecuta b	

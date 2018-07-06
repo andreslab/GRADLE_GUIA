@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'application' //ayuda a ejecutar tareas secuenciales para compilar el proyecto de golpe
+
+
+sourceCompatibility = "1.8" //version de java compatible
+
+version = "1.0"
+
+
+//le indicamos al plugin application como se llama la clase principal 
+mainClassName = "hola"
+
+jar {	
+	manifest {
+		attributes 'Main-Class': 'hola'
+	}
+	
+}

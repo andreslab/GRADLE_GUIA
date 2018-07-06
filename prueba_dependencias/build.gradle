@@ -1,0 +1,22 @@
+/*
+ejecutar cola de tareas una seguida de otra
+*/
+
+task a << {
+	println 'tarea a'
+}
+
+task b {
+	dependsOn 'a'
+	
+	doLast {
+		println 'tarea b 2'
+	}
+	println 'tarea b'
+}
+
+//la tarea c depende de la b
+task c(dependsOn: 'b') << {
+	println 'tarea c'
+}
+

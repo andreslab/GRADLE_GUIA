@@ -1,0 +1,16 @@
+task crearDist << {
+	new File('dist').mkdirs()
+}
+
+task copiar(type: Copy, dependsOn: crearDist){
+	from 'tools' //lo que copiara
+	//from 'settings.xml'
+
+	into 'dist' //destino
+
+	//solo archivos que terminen en txt
+	include '*.txt'
+
+	//ignorar archivos
+	//exlude '*.bat' //todos los archivos que acaben en .bat
+}

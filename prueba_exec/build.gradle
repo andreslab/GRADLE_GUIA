@@ -1,0 +1,5 @@
+task ejecutar(type: Exec){
+	commandLine 'ls', '-lR', 'dist'
+
+	standardOutput = new FileOutputStream('dist/salida.txt') //todo se escribe en salida.txt
+}

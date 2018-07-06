@@ -1,0 +1,16 @@
+apply plugin: 'java' //indica que se usara java
+
+sourceCompatibility = "1.8" //version de java compatible
+
+version = "1.0" //version del proyuecto, se refleja en los jar
+
+jar {
+	//podemos cambiar todo lo que se hace con el jar
+	//dentro del jar hay un manifest que le indica que .class hay que correr donde esta el main
+	
+	manifest {
+		//le indicamos que hola es la clase que continiene el main
+		attributes 'Main-Class': 'hola'
+	}
+	
+}

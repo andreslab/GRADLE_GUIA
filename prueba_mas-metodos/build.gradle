@@ -1,0 +1,32 @@
+/*
+mas tareas que se usan dentro de una tarea
+*/
+
+task hola1 {
+	doFirst {
+		println 'hola1.doFirst'
+	}
+	doLast {
+		println 'hola1.doLast'
+	}
+}
+
+task hola2(dependsOn: hola1) {
+	doFirst {
+		println 'hola2.doFirst'
+	}
+	doLast {
+		println 'hola2.doLast'
+	}
+}
+
+
+task a << {
+	println 'ejecutando a'
+}
+
+task b << {
+	println 'ejecutando b'
+}
+
+b.mustRunAfter a

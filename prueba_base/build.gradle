@@ -1,0 +1,47 @@
+task compilar << {
+	println 'Estoy compilando...'
+}
+
+task pruebas << {
+	println 'Estoy lanzando pruebas'
+}
+
+task empaquetando << {
+	println 'Estoy empaquetando'
+}
+
+task holamundo {
+
+	//variables
+	ext.apellido = "Andrade"
+
+	ext  {
+		nombre = "Jaime"
+		correo = "jaime@gmail.com"
+		version = "1.0"
+	}
+
+
+	//comportamiento
+	//usar doLast es lo mismo q usar task holamundo << {}
+	doLast {
+		println 'termino de compilar'
+	}
+}
+task hola {
+	hola.doLast {
+		println 'hola mundo'
+	}
+
+}
+
+task compila << {
+
+	String dia = 'viernes'
+	Date ahora = new Date()
+	
+	println 'Compilando por  ' + holamundo.nombre
+
+	println 'EL dia es' + ahora.toString()
+}
+

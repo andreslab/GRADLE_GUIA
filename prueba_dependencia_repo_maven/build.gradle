@@ -1,0 +1,39 @@
+apply plugin: 'java'
+apply plugin: 'application' //ayuda a ejecutar tareas secuenciales para compilar el proyecto de golpe
+
+
+sourceCompatibility = "1.8" //version de java compatible
+
+version = "1.0"
+
+
+//le indicamos al plugin application como se llama la clase principal 
+mainClassName = "hola"
+
+jar {	
+	manifest {
+		attributes 'Main-Class': 'hola'
+	}
+	
+}
+
+//agregar repo de maven donde estan las dependencias
+//buscar en serach.maven.org
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'com.peterlavalle.libgdx:demos.invaders.android:1.3.3'
+
+	//4 tipos de de dependencias
+	//compile: al compilar y necesitan descargarse
+	//runtime: jar que no necesita al compilar pero si al ejecutar 
+	//testCompile: se usa al momento de compilar pero para testeo cuando se usa junit
+	//testRuntime: para test pero al ejecutar
+
+	//hay otra forma de llamar a la dependencia
+	//compile grupo:artefact:version //forma reducida
+	//compile group: '...', name: '...artefacto..', version: '...'
+}

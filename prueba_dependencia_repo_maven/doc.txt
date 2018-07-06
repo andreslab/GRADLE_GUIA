@@ -1,0 +1,11 @@
+ejecutar un .jar
+java -jar prueba-1.0.jar
+
+ejecutar el gradle que genera los .class desde los .java
+gradle -q build
+
+ejecutar el .class
+java NOMBRE_ARCHIVO_CLASS
+java -cp RUTA NOMBRE_ARCHIVO_CLASS
+
+

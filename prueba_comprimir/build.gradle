@@ -1,0 +1,12 @@
+task comprimir(type: Zip){
+	from 'disk'
+	//archiveName 'archivo.zip'
+	//o tamb
+
+	baseName 'miproyecto'
+	version '1.0.'0'
+	
+
+//revisar gruvi doc www.gradle.org/docs
+	
+}
